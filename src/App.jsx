@@ -23,7 +23,6 @@ function App() {
   return (
     <div className="app-wrapper">
       
-      {/* Fondo decorativo moderno */}
       <div className="bg-glow"></div>
 
       {/* HERO SECTION */}
@@ -31,7 +30,8 @@ function App() {
         <div className="container">
           <div className="badge animate-slide-up">🚀 Mentoría Premium</div>
           
-          {datos.fotoPerfil && (
+          {/* AQUÍ ESTÁ LA MAGIA DE LA FOTO CORREGIDA */}
+          {datos.fotoPerfil && datos.fotoPerfil.asset && (
             <div className="foto-wrapper animate-pop">
               <div className="foto-ring"></div>
               <img 
@@ -47,7 +47,7 @@ function App() {
         </div>
       </header>
 
-      {/* VENTAJAS SECTION (Efecto Glassmorphism) */}
+      {/* VENTAJAS SECTION */}
       {datos.ventajas && datos.ventajas.length > 0 && (
         <section className="ventajas-section animate-slide-up" style={{ animationDelay: '0.2s' }}>
           <div className="container">
@@ -85,9 +85,11 @@ function App() {
         </div>
       </section>
 
-      {/* FOOTER ACTUALIZADO */}
+      {/* FOOTER */}
       <footer className="footer-section">
-        <p>© {new Date().getFullYear()} codemagnum. Todos los derechos reservados.</p>
+        <p>
+          © {new Date().getFullYear()} {datos.textoFooter ? datos.textoFooter : 'codemagnum. Todos los derechos reservados.'}
+        </p>
       </footer>
 
     </div>
