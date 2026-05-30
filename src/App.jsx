@@ -31,19 +31,42 @@ function App() {
             </div>
           )}
           <h1 className="title gradient-text">{datos.tituloPrincipal}</h1>
-          <p className="desc">{datos.descripcion}</p>
+          {/* Aquí se mostrará tu párrafo introductorio con saltos de línea automáticos */}
+          <div className="desc">
+            {datos.descripcion && datos.descripcion.split('\n').map((line, i) => (
+              <span key={i}>{line}<br/></span>
+            ))}
+          </div>
         </div>
       </header>
 
+      {/* SECCIÓN 1: VENTAJAS */}
       {datos.ventajas?.length > 0 && (
         <section className="ventajas-section animate-slide-up">
           <div className="container">
-            <h2 className="subtitle">Tu camino hacia la rentabilidad</h2>
+            <h2 className="subtitle">¿Qué ventajas obtendrás?</h2>
             <div className="grid-ventajas">
               {datos.ventajas.map((ventaja, idx) => (
                 <div key={idx} className="card-ventaja">
                   <div className="icon-wrapper"><span className="check-icon">✓</span></div>
                   <p>{ventaja}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* SECCIÓN 2: LO QUE ELIMINAS (NUEVO) */}
+      {datos.loQueEliminas?.length > 0 && (
+        <section className="eliminamos-section animate-slide-up">
+          <div className="container">
+            <h2 className="subtitle">Lo que eliminas al trabajar conmigo</h2>
+            <div className="grid-ventajas">
+              {datos.loQueEliminas.map((item, idx) => (
+                <div key={idx} className="card-ventaja card-elimina">
+                  <div className="icon-wrapper icon-red"><span className="x-icon">✕</span></div>
+                  <p>{item}</p>
                 </div>
               ))}
             </div>

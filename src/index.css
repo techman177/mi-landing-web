@@ -3,10 +3,11 @@
 ========================================= */
 :root {
   --bg-dark: #0f172a;
-  --card-bg: rgba(255, 255, 255, 0.03); /* Efecto cristal más elegante */
+  --card-bg: rgba(255, 255, 255, 0.03); 
   --card-border: rgba(255, 255, 255, 0.08);
   --accent-green: #10b981;
   --accent-hover: #059669;
+  --accent-red: #ef4444;
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
 }
@@ -20,493 +21,565 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.app-wrapper {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
+.app-wrapper { 
+  position: relative; 
+  min-height: 100vh; 
+  overflow: hidden; 
 }
 
-/* Fondo con brillo premium */
 .bg-glow {
-  position: absolute;
-  top: -20%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
+  position: absolute; 
+  top: -20%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 100vw; 
   height: 100vh;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0) 70%); 
   z-index: -1;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-  text-align: center;
+.container { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  padding: 0 24px; 
+  text-align: center; 
 }
 
 /* =========================================
-   2. HERO SECTION (Inicio)
+   2. HERO SECTION
 ========================================= */
-.hero-section {
-  padding: 100px 0 60px;
+.hero-section { 
+  padding: 100px 0 60px; 
 }
 
-.badge {
-  display: inline-block;
-  background: rgba(16, 185, 129, 0.1);
-  color: var(--accent-green);
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 35px;
-  border: 1px solid rgba(16, 185, 129, 0.2);
-  letter-spacing: 0.5px;
+.badge { 
+  display: inline-block; 
+  background: rgba(16, 185, 129, 0.1); 
+  color: var(--accent-green); 
+  padding: 8px 20px; 
+  border-radius: 50px; 
+  font-weight: 600; 
+  font-size: 0.95rem; 
+  margin-bottom: 35px; 
+  border: 1px solid rgba(16, 185, 129, 0.2); 
+  letter-spacing: 0.5px; 
 }
 
-.foto-wrapper {
-  position: relative;
-  width: 160px;
-  height: 160px;
-  margin: 0 auto 35px;
+.foto-wrapper { 
+  position: relative; 
+  width: 160px; 
+  height: 160px; 
+  margin: 0 auto 35px; 
 }
 
-.foto-ring {
-  position: absolute;
-  inset: -6px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, var(--accent-green), #3b82f6);
-  z-index: 0;
-  animation: spin 4s linear infinite;
+.foto-ring { 
+  position: absolute; 
+  inset: -6px; 
+  border-radius: 50%; 
+  background: linear-gradient(45deg, var(--accent-green), #3b82f6); 
+  z-index: 0; 
+  animation: spin 4s linear infinite; 
 }
 
-.foto-perfil {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  z-index: 1;
-  border: 5px solid var(--bg-dark);
+.foto-perfil { 
+  position: relative; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 50%; 
+  z-index: 1; 
+  border: 5px solid var(--bg-dark); 
 }
 
-.title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin: 0 0 25px;
-  line-height: 1.15;
+.title { 
+  font-size: 3.5rem; 
+  font-weight: 800; 
+  margin: 0 0 25px; 
+  line-height: 1.15; 
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.gradient-text { 
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
 }
 
-.desc {
-  font-size: 1.25rem;
-  color: var(--text-muted);
-  max-width: 650px;
-  margin: 0 auto;
+.desc { 
+  font-size: 1.25rem; 
+  color: var(--text-muted); 
+  max-width: 650px; 
+  margin: 0 auto; 
+  text-align: center; 
 }
 
 /* =========================================
-   3. SECCIONES COMPARTIDAS
+   3. TÍTULOS DE SECCIONES
 ========================================= */
-.subtitle {
-  font-size: 2.2rem;
-  margin-bottom: 50px;
-  font-weight: 700;
-  color: #ffffff;
+.subtitle { 
+  font-size: 2.2rem; 
+  margin-bottom: 50px; 
+  font-weight: 700; 
+  color: #ffffff; 
 }
 
 /* =========================================
-   4. VENTAJAS
+   4. VENTAJAS Y LO QUE ELIMINAS
 ========================================= */
-.ventajas-section {
-  padding: 80px 0;
+.ventajas-section { 
+  padding: 60px 0; 
 }
 
-.grid-ventajas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+.eliminamos-section { 
+  padding: 20px 0 80px; 
 }
 
-.card-ventaja {
-  background: var(--card-bg);
-  backdrop-filter: blur(12px); /* Efecto cristal */
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--card-border);
-  color: var(--text-main);
-  padding: 30px;
-  border-radius: 20px;
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  text-align: left;
-  font-weight: 400;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+.grid-ventajas { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 24px; 
 }
 
-.card-ventaja:hover {
-  transform: translateY(-5px);
-  border-color: rgba(16, 185, 129, 0.4);
+.card-ventaja { 
+  background: var(--card-bg); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); 
+  border: 1px solid var(--card-border); 
+  color: var(--text-main); 
+  padding: 30px; 
+  border-radius: 20px; 
+  display: flex; 
+  align-items: flex-start; 
+  gap: 20px; 
+  text-align: left; 
+  font-weight: 400; 
+  transition: transform 0.3s ease, border-color 0.3s ease; 
 }
 
-.icon-wrapper {
-  background: rgba(16, 185, 129, 0.15);
-  color: var(--accent-green);
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  font-weight: bold;
+.card-ventaja:hover { 
+  transform: translateY(-5px); 
+  border-color: rgba(16, 185, 129, 0.4); 
+}
+
+.icon-wrapper { 
+  background: rgba(16, 185, 129, 0.15); 
+  color: var(--accent-green); 
+  width: 35px; 
+  height: 35px; 
+  border-radius: 50%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-shrink: 0; 
+  font-weight: bold; 
+}
+
+/* --- Estilos especiales para la sección "Lo que eliminas" --- */
+.card-elimina:hover { 
+  border-color: rgba(239, 68, 68, 0.4); 
+}
+
+.icon-red { 
+  background: rgba(239, 68, 68, 0.15); 
+  color: var(--accent-red); 
 }
 
 /* =========================================
    5. TESTIMONIOS
 ========================================= */
-.testimonios-section {
-  padding: 60px 0;
+.testimonios-section { 
+  padding: 60px 0; 
 }
 
-.grid-testimonios {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+.grid-testimonios { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 30px; 
 }
 
-.card-testimonio {
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--card-border);
-  padding: 40px 30px;
-  border-radius: 24px;
-  text-align: left;
-  transition: transform 0.3s ease;
+.card-testimonio { 
+  background: var(--card-bg); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); 
+  border: 1px solid var(--card-border); 
+  padding: 40px 30px; 
+  border-radius: 24px; 
+  text-align: left; 
+  transition: transform 0.3s ease; 
 }
 
-.card-testimonio:hover {
-  transform: translateY(-5px);
+.card-testimonio:hover { 
+  transform: translateY(-5px); 
 }
 
-.stars {
-  color: #fbbf24;
-  margin-bottom: 20px;
-  font-size: 1.3rem;
-  letter-spacing: 3px;
+.stars { 
+  color: #fbbf24; 
+  margin-bottom: 20px; 
+  font-size: 1.3rem; 
+  letter-spacing: 3px; 
 }
 
-.testimonio-texto {
-  font-style: italic;
-  color: var(--text-main);
-  margin-bottom: 25px;
-  line-height: 1.7;
-  font-size: 1.05rem;
+.testimonio-texto { 
+  font-style: italic; 
+  color: var(--text-main); 
+  margin-bottom: 25px; 
+  line-height: 1.7; 
+  font-size: 1.05rem; 
 }
 
-.testimonio-autor {
-  margin: 0;
-  color: var(--accent-green);
-  font-size: 1.1rem;
+.testimonio-autor { 
+  margin: 0; 
+  color: var(--accent-green); 
+  font-size: 1.1rem; 
 }
 
-.testimonio-pais {
-  margin: 5px 0 0;
-  color: var(--text-muted);
-  font-size: 0.9rem;
+.testimonio-pais { 
+  margin: 5px 0 0; 
+  color: var(--text-muted); 
+  font-size: 0.9rem; 
 }
 
 /* =========================================
    6. PREGUNTAS FRECUENTES (FAQ)
 ========================================= */
-.faq-section {
-  padding: 60px 0;
-  max-width: 800px;
-  margin: 0 auto;
+.faq-section { 
+  padding: 60px 0; 
+  max-width: 800px; 
+  margin: 0 auto; 
 }
 
-.faq-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.faq-container { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px; 
 }
 
-.faq-item {
-  background: var(--card-bg);
-  border-radius: 16px;
-  border: 1px solid var(--card-border);
-  overflow: hidden;
-  transition: all 0.3s ease;
+.faq-item { 
+  background: var(--card-bg); 
+  border-radius: 16px; 
+  border: 1px solid var(--card-border); 
+  overflow: hidden; 
+  transition: all 0.3s ease; 
 }
 
-.faq-question {
-  padding: 24px;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--text-main);
-  margin: 0;
-  font-size: 1.15rem;
-  transition: background 0.3s ease;
+.faq-question { 
+  padding: 24px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  color: var(--text-main); 
+  margin: 0; 
+  font-size: 1.15rem; 
+  transition: background 0.3s ease; 
 }
 
-.faq-question:hover {
-  background: rgba(255, 255, 255, 0.05);
+.faq-question:hover { 
+  background: rgba(255, 255, 255, 0.05); 
 }
 
-.faq-answer {
-  padding: 0 24px;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--text-muted);
-  line-height: 1.7;
+.faq-answer { 
+  padding: 0 24px; 
+  max-height: 0; 
+  overflow: hidden; 
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+  color: var(--text-muted); 
+  line-height: 1.7; 
 }
 
-.faq-item.open {
-  background: rgba(16, 185, 129, 0.05);
-  border-color: rgba(16, 185, 129, 0.3);
+.faq-item.open { 
+  background: rgba(16, 185, 129, 0.05); 
+  border-color: rgba(16, 185, 129, 0.3); 
 }
 
-.faq-item.open .faq-answer {
-  padding: 0 24px 24px 24px;
-  max-height: 600px; /* Suficiente para textos largos */
+.faq-item.open .faq-answer { 
+  padding: 0 24px 24px 24px; 
+  max-height: 600px; 
 }
 
-.faq-icon {
-  font-size: 1.6rem;
-  transition: transform 0.3s ease;
-  color: var(--accent-green);
-  line-height: 1;
+.faq-icon { 
+  font-size: 1.6rem; 
+  transition: transform 0.3s ease; 
+  color: var(--accent-green); 
+  line-height: 1; 
 }
 
-.faq-item.open .faq-icon {
-  transform: rotate(45deg);
-}
-
-/* =========================================
-   7. CALL TO ACTION (CTA)
-========================================= */
-.cta-section {
-  padding: 80px 0;
-}
-
-.cta-card {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--card-border);
-  padding: 60px 40px;
-  border-radius: 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.cta-card h2 {
-  margin-top: 0;
-  font-size: 2.8rem;
-  color: #ffffff;
-}
-
-.cta-card p {
-  font-size: 1.2rem;
-  color: var(--text-muted);
-  margin-bottom: 30px;
-}
-
-.btn-link {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn-inversion {
-  background: var(--accent-green);
-  color: white;
-  border: none;
-  padding: 20px 45px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-inversion:hover {
-  background: var(--accent-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
+.faq-item.open .faq-icon { 
+  transform: rotate(45deg); 
 }
 
 /* =========================================
-   8. FOOTER Y LEGALES
+   7. CALL TO ACTION (Botón de Compra)
 ========================================= */
-.footer-section {
-  padding: 50px 0;
-  text-align: center;
-  border-top: 1px solid var(--card-border);
-  color: var(--text-muted);
+.cta-section { 
+  padding: 80px 0; 
 }
 
-.legal-links {
-  margin-top: 20px;
-  font-size: 0.9rem;
+.cta-card { 
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9)); 
+  backdrop-filter: blur(10px); 
+  border: 1px solid var(--card-border); 
+  padding: 60px 40px; 
+  border-radius: 30px; 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); 
 }
 
-.legal-link {
-  cursor: pointer;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.cta-card h2 { 
+  margin-top: 0; 
+  font-size: 2.8rem; 
+  color: #ffffff; 
 }
 
-.legal-link:hover {
-  color: var(--accent-green);
-  text-decoration: underline;
+.cta-card p { 
+  font-size: 1.2rem; 
+  color: var(--text-muted); 
+  margin-bottom: 30px; 
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(15, 23, 42, 0.9);
-  backdrop-filter: blur(8px);
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  animation: fadeIn 0.3s ease;
+.btn-link { 
+  text-decoration: none; 
+  display: inline-block; 
 }
 
-.modal-content {
-  background: #1e293b;
-  color: var(--text-main);
-  padding: 40px;
-  border-radius: 24px;
-  max-width: 650px;
-  width: 100%;
-  max-height: 85vh;
-  overflow-y: auto;
-  position: relative;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  animation: popIn 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.btn-inversion { 
+  background: var(--accent-green); 
+  color: white; 
+  border: none; 
+  padding: 20px 45px; 
+  font-size: 1.25rem; 
+  font-weight: 700; 
+  border-radius: 50px; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
 }
 
-.modal-content h2 {
-  margin-top: 0;
-  color: #ffffff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 20px;
+.btn-inversion:hover { 
+  background: var(--accent-hover); 
+  transform: translateY(-3px); 
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3); 
 }
 
-.modal-body {
-  color: var(--text-muted);
-  line-height: 1.7;
-  font-size: 1rem;
-  margin-bottom: 35px;
+/* =========================================
+   8. FOOTER Y VENTANAS LEGALES
+========================================= */
+.footer-section { 
+  padding: 50px 0; 
+  text-align: center; 
+  border-top: 1px solid var(--card-border); 
+  color: var(--text-muted); 
 }
 
-.btn-close-modal {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border: none;
-  padding: 15px 25px;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-  width: 100%;
-  font-size: 1.05rem;
+.legal-links { 
+  margin-top: 20px; 
+  font-size: 0.9rem; 
 }
 
-.btn-close-modal:hover {
-  background: rgba(255, 255, 255, 0.2);
+.legal-link { 
+  cursor: pointer; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+}
+
+.legal-link:hover { 
+  color: var(--accent-green); 
+  text-decoration: underline; 
+}
+
+.modal-overlay { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background: rgba(15, 23, 42, 0.9); 
+  backdrop-filter: blur(8px); 
+  z-index: 1000; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px; 
+  animation: fadeIn 0.3s ease; 
+}
+
+.modal-content { 
+  background: #1e293b; 
+  color: var(--text-main); 
+  padding: 40px; 
+  border-radius: 24px; 
+  max-width: 650px; 
+  width: 100%; 
+  max-height: 85vh; 
+  overflow-y: auto; 
+  position: relative; 
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
+  animation: popIn 0.3s ease; 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+.modal-content h2 { 
+  margin-top: 0; 
+  color: #ffffff; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+  padding-bottom: 20px; 
+}
+
+.modal-body { 
+  color: var(--text-muted); 
+  line-height: 1.7; 
+  font-size: 1rem; 
+  margin-bottom: 35px; 
+  text-align: left; 
+}
+
+.btn-close-modal { 
+  background: rgba(255, 255, 255, 0.1); 
+  color: #ffffff; 
+  border: none; 
+  padding: 15px 25px; 
+  border-radius: 12px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  transition: all 0.3s; 
+  width: 100%; 
+  font-size: 1.05rem; 
+}
+
+.btn-close-modal:hover { 
+  background: rgba(255, 255, 255, 0.2); 
 }
 
 /* =========================================
    9. BOTÓN FLOTANTE WHATSAPP
 ========================================= */
-.wa-flotante {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #25D366;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-  z-index: 999;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.wa-flotante { 
+  position: fixed; 
+  bottom: 30px; 
+  right: 30px; 
+  background-color: #25D366; 
+  width: 65px; 
+  height: 65px; 
+  border-radius: 50%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); 
+  z-index: 999; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-.wa-flotante:hover {
-  transform: scale(1.1) translateY(-5px);
-  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+.wa-flotante:hover { 
+  transform: scale(1.1) translateY(-5px); 
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5); 
 }
 
 /* =========================================
-   10. ADAPTACIÓN PARA CELULARES (RESPONSIVE)
+   10. ADAPTACIÓN PARA CELULARES
 ========================================= */
 @media (max-width: 768px) {
-  .title { font-size: 2.5rem; }
-  .subtitle { font-size: 1.8rem; }
-  .desc { font-size: 1.1rem; }
-  .hero-section { padding: 60px 0 30px; }
-  .cta-card { padding: 40px 20px; }
-  .cta-card h2 { font-size: 2rem; }
-  .btn-inversion { width: 100%; padding: 18px 20px; font-size: 1.1rem; }
-  .wa-flotante { bottom: 20px; right: 20px; width: 55px; height: 55px; }
+  .title { 
+    font-size: 2.5rem; 
+  } 
+  .subtitle { 
+    font-size: 1.8rem; 
+  } 
+  .desc { 
+    font-size: 1.1rem; 
+  }
+  .hero-section { 
+    padding: 60px 0 30px; 
+  } 
+  .cta-card { 
+    padding: 40px 20px; 
+  } 
+  .cta-card h2 { 
+    font-size: 2rem; 
+  }
+  .btn-inversion { 
+    width: 100%; 
+    padding: 18px 20px; 
+    font-size: 1.1rem; 
+  }
+  .wa-flotante { 
+    bottom: 20px; 
+    right: 20px; 
+    width: 55px; 
+    height: 55px; 
+  }
 }
 
 @media (max-width: 480px) {
-  .title { font-size: 2.2rem; }
-  .foto-wrapper { width: 130px; height: 130px; }
-  .card-testimonio { padding: 25px 20px; }
+  .title { 
+    font-size: 2.2rem; 
+  } 
+  .foto-wrapper { 
+    width: 130px; 
+    height: 130px; 
+  } 
+  .card-testimonio { 
+    padding: 25px 20px; 
+  }
 }
 
 /* =========================================
-   11. UTILIDADES Y ANIMACIONES
+   11. ANIMACIONES Y ESTADO DE CARGA
 ========================================= */
-.loader-container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--accent-green);
-  font-weight: 600;
-  background-color: var(--bg-dark);
+.loader-container { 
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  color: var(--accent-green); 
+  font-weight: 600; 
+  background-color: var(--bg-dark); 
 }
 
-.spinner {
-  width: 45px;
-  height: 45px;
-  border: 4px solid rgba(16, 185, 129, 0.2);
-  border-top-color: var(--accent-green);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: 20px;
+.spinner { 
+  width: 45px; 
+  height: 45px; 
+  border: 4px solid rgba(16, 185, 129, 0.2); 
+  border-top-color: var(--accent-green); 
+  border-radius: 50%; 
+  animation: spin 1s linear infinite; 
+  margin-bottom: 20px; 
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes popIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes spin { 
+  to { transform: rotate(360deg); } 
+}
 
-.animate-fade-in { animation: fadeIn 1s ease forwards; }
-.animate-pop { animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
-.animate-slide-up { animation: slideUp 0.8s ease forwards; opacity: 0; }
+@keyframes fadeIn { 
+  from { opacity: 0; } 
+  to { opacity: 1; } 
+}
 
-.pulse-effect { animation: pulse 2s infinite; }
+@keyframes popIn { 
+  from { opacity: 0; transform: scale(0.95); } 
+  to { opacity: 1; transform: scale(1); } 
+}
+
+@keyframes slideUp { 
+  from { opacity: 0; transform: translateY(30px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+
+.animate-fade-in { 
+  animation: fadeIn 1s ease forwards; 
+}
+
+.animate-pop { 
+  animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
+}
+
+.animate-slide-up { 
+  animation: slideUp 0.8s ease forwards; 
+  opacity: 0; 
+}
+
+.pulse-effect { 
+  animation: pulse 2s infinite; 
+}
+
 @keyframes pulse { 
   0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); } 
   70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); } 
